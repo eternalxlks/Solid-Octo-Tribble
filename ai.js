@@ -1,27 +1,25 @@
-// Ai.js - Handles AI interactions for Solid Octo Tribble
-
 // List of responses for the AI to use
 const responses = {
   greeting: [
     "Hello there! I'm the Solid Octo Tribble!",
     "Hi! How can I make your day brighter?",
-    "Greetings, human friend!"
+    "Greetings, human friend!",
   ],
   question: [
     "That's an interesting question! Let me think...",
     "I wish I had all the answers, but I'm just a cute Tribble!",
-    "Hmm, maybe you can teach me the answer!"
+    "Hmm, maybe you can teach me the answer!",
   ],
   compliment: [
     "Aww, you're so kind!",
     "Thank you! You're amazing too!",
-    "Yay! Compliments fuel my happiness!"
+    "Yay! Compliments fuel my happiness!",
   ],
   fallback: [
     "I'm not sure how to respond to that, but I love chatting!",
     "Can you tell me more? I want to understand!",
-    "You're awesome for talking to me!"
-  ]
+    "You're awesome for talking to me!",
+  ],
 };
 
 // Function to determine the type of input and respond
