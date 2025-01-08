@@ -28,22 +28,6 @@
       position: relative;
       animation: bounce 2s infinite;
     }
-    .tribble::before,
-    .tribble::after {
-      content: '';
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      background: radial-gradient(circle, #ff9f9f, #ff6f6f);
-      border-radius: 50%;
-      top: 20px;
-    }
-    .tribble::before {
-      left: -50px;
-    }
-    .tribble::after {
-      right: -50px;
-    }
     @keyframes bounce {
       0%, 100% {
         transform: translateY(0);
