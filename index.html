@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solid Octo Tribble</title>
+  <title>Solid Octo Tribble AI</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -52,22 +52,51 @@
         transform: translateY(-20px);
       }
     }
-    .message {
-      font-size: 1.5rem;
-      color: #333;
+    .chat-container {
       margin-top: 20px;
+      width: 80%;
+      max-width: 400px;
     }
-    .button {
+    .chat-box {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 10px;
+      height: 300px;
+      overflow-y: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .message {
+      margin: 10px 0;
+    }
+    .message.user {
+      text-align: right;
+      color: #333;
+    }
+    .message.ai {
+      text-align: left;
+      color: #ff6f6f;
+    }
+    .input-area {
+      display: flex;
+      margin-top: 10px;
+    }
+    .input-area input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-right: 5px;
+    }
+    .input-area button {
+      padding: 10px 20px;
+      border: none;
       background: #ff6f6f;
       color: white;
-      border: none;
       border-radius: 5px;
-      padding: 10px 20px;
       cursor: pointer;
-      margin-top: 20px;
-      font-size: 1rem;
     }
-    .button:hover {
+    .input-area button:hover {
       background: #ff4c4c;
     }
   </style>
@@ -75,22 +104,14 @@
 <body>
   <div class="container">
     <div class="tribble"></div>
-    <div class="message">Meet the Solid Octo Tribble!</div>
-    <button class="button" onclick="changeMessage()">Click Me!</button>
+    <div class="chat-container">
+      <div id="chatBox" class="chat-box"></div>
+      <div class="input-area">
+        <input type="text" id="userInput" placeholder="Say something to the Tribble...">
+        <button onclick="handleUserInput()">Send</button>
+      </div>
+    </div>
   </div>
-
-  <script>
-    function changeMessage() {
-      const messages = [
-        "The Tribble is happy!",
-        "The Tribble is curious!",
-        "The Tribble loves you!",
-        "The Tribble is excited!",
-      ];
-      const messageDiv = document.querySelector('.message');
-      const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-      messageDiv.textContent = randomMessage;
-    }
-  </script>
+  <script src="Ai.js"></script>
 </body>
 </html>
